@@ -37,7 +37,30 @@ The interactive Excel dashboard features slicers for Month and Day, alongside cr
 * **Size Preferences:** Large (30%) and Regular (31%) sizes make up the vast majority of specified drink orders, while Small accounts for only 9%.
 
 <img width="1857" height="793" alt="Coffee_shop_dashboard" src="https://github.com/user-attachments/assets/c67894c2-0986-4241-a976-3f7b8dc1cb48" />
-                              Coffee Shop Dashboard 
+                              Coffee Shop Sales Dashboard 
+
+## Data Pipeline
+
+### **1. Raw Data Overview**
+The raw dataset from Maven Analytics contained 149,116 transactional records spanning January to June, with the following key fields:
+* transaction_id, transaction_date, transaction_time
+* store_id, store_location
+* product_id, product_category, product_type, product_detail
+* unit_price, transaction_qty
+  
+### **2. Data Cleaning**
+Performed directly in Excel before building any Pivot Tables:
+* **Removed duplicates:** checked for duplicate transaction_id entries using Remove Duplicates to ensure row-level integrity.
+* **Handled missing/blank values:** scanned all columns using filters; no significant nulls were found in key fields.
+* **Standardized text fields:** ensured consistent casing and spacing in store_location, product_category, and product_type columns using TRIM() and PROPER().
+* **Corrected data types:** ensured transaction_data was formatted as Date and transaction_time as Time, resolving any text-stored values.
+* **Validated numeric fields:** confirmed unit_price and transactions_qty had no negative or zero-value anomalies using filters.
+* **Derived Columns:** new columns were extracted from existing data to enable time-based and sales analysis.
+
+### **3. Dashboard Assembly**
+* All Pivot Charts were linked to a single **Dashboard sheet** for a clean, unified view.
+* Slicers (Month, Day of Week) were connected across all charts for synchronized filtering.
+* KPI tiles (Total Sales, Footfall, Avg Order Value, Avg Quantity) were computed using GETPIVOTDATA()
 
 ## Tools & Techniques Used
 - **Microsoft Excel:** Data Cleaning, Data Modeling, and formatting.
