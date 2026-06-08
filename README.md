@@ -36,6 +36,9 @@ The interactive Excel dashboard features slicers for Month and Day, alongside cr
 * **Top Sellers:** The **Barista Espresso** is by far the highest-grossing individual product, outperforming other top items like Brewed Chai Tea and Gourmet Brewed Coffee.
 * **Size Preferences:** Large (30%) and Regular (31%) sizes make up the vast majority of specified drink orders, while Small accounts for only 9%.
 
+<img width="1857" height="793" alt="Coffee_shop_dashboard" src="https://github.com/user-attachments/assets/c67894c2-0986-4241-a976-3f7b8dc1cb48" />
+                              Coffee Shop Dashboard 
+
 ## Tools & Techniques Used
 - **Microsoft Excel:** Data Cleaning, Data Modeling, and formatting.
 - **Pivot Tables & Pivot Charts:** For aggregating large datasets and creating dynamic visual representations.
